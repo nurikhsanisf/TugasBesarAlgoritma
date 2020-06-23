@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.tugasbesaralgonur.CreateFormActivity"
+    android:background="@color/ic_logo_kab_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/default_kotak_order"
+        android:padding="10dp">
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/input_nik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Induk Kependudukan"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:met_floatingLabel="highlight"
+            android:layout_marginBottom="5dp"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:met_floatingLabel="highlight"
+            android:layout_marginBottom="5dp"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/tv_jenis_kelamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="140dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/radioGroupNb"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/colorBlack"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupNb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                app:layout_constraintLeft_toRightOf="@+id/tv_jenis_kelamin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/laki_laki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Laki-laki"
+                    android:textColor="@color/colorBlack"/>
+
+                <RadioButton
+                    android:id="@+id/radioPerempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"
+                    android:textColor="@color/colorBlack"/>
+
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/tv_Status_Warga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="140dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/radioGroupSB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Status Warga"
+                android:textColor="@color/colorBlack"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupSB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                app:layout_constraintLeft_toRightOf="@+id/tv_Status_Warga"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <RadioButton
+                    android:id="@+id/radioPositif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Positif"
+                    android:textColor="@color/colorBlack"/>
+
+                <RadioButton
+                    android:id="@+id/PDP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PDP"
+                    android:textColor="@color/colorBlack"/>
+
+                <RadioButton
+                    android:id="@+id/ODP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ODP"
+                    android:textColor="@color/colorBlack"/>
+
+                <RadioButton
+                    android:id="@+id/ODR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ODR"
+                    android:textColor="@color/colorBlack"/>
+
+                <RadioButton
+                    android:id="@+id/OTG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTG"
+                    android:textColor="@color/colorBlack"/>
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/input_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Alamat"
+            android:inputType="text"
+            android:textSize="16sp"
+            app:met_floatingLabel="highlight"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/tv_Dusun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="140dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/radioGroupNR"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Dusun"
+                android:textColor="@color/colorBlack"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupNR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                app:layout_constraintLeft_toRightOf="@+id/tv_Dusun"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/Kalapanunggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Kalapanunggal"
+                    android:textColor="@color/colorBlack"/>
+
+                <RadioButton
+                    android:id="@+id/radioGendereh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gendereh"
+                    android:textColor="@color/colorBlack"/>
+
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/simpan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="simpan"
+            android:textColor="@color/colorBlack"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:background="@drawable/default_kotak_order"
+            android:backgroundTint="#F1CA05"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/default_kotak_order"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/cl_action"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_nik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/cl_nama"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_label_nik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_tanda_nik"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:text="NIK"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_tanda_nik"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_value_nik"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_label_nik"
+                        android:text=":"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_value_nik"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_tanda_nik"
+                        android:text="3211100101010"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/cl_jenkel"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_nik">
+
+                    <TextView
+                        android:id="@+id/tv_label_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_tanda_nama"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:text="Nama"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tanda_nama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_value_nama"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_label_nama"
+                        android:text=":"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_value_nama"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="3211100101010"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_tanda_nama"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_jenkel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/cl_alamat"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_nama">
+
+                    <TextView
+                        android:id="@+id/tv_label_jenkel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_tanda_jenkel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:text="Jenis Kelamin"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_tanda_jenkel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_value_jenkel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_label_jenkel"
+                        android:text=":"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_value_jenkel"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_tanda_jenkel"
+                        android:text="3211100101010"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/cl_status"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_jenkel">
+
+                    <TextView
+                        android:id="@+id/tv_label_alamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_tanda_alamat"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:text="Alamat"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_tanda_alamat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_value_alamat"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_label_alamat"
+                        android:text=":"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_value_alamat"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_tanda_alamat"
+                        android:text="RT 02 Rw "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_alamat">
+
+                    <TextView
+                        android:id="@+id/tv_label_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_tanda_status"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:text="Status"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_tanda_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_value_status"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_label_status"
+                        android:text=":"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_value_status"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_tanda_status"
+                        android:text="PDP"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/cl_details"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="5dp">
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_hapus"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="Edit"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/btn_hapus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="Hapus"
+                    android:textSize="12sp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
